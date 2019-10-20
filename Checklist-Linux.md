@@ -15,9 +15,10 @@
   * look for sudo privileges that shouldn't be there
   * verify that no one can use sudo without a password
 
+  **THEN:** kill any active red team SSH sessions:
+  * do 'who -u', then for any sessions that shouldn't be there, do 'kill [process #]'
+
 ## After Initial Setup
-**FIRST:** kill any active red team SSH sessions:
-* do 'who -u', then for any sessions that shouldn't be there, do 'kill [process #]'
 
 ### Log Files
 * open a new terminal and do 'tail -f /var/log/auth.log', check periodically for suspicious logins
