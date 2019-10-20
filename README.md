@@ -1,6 +1,6 @@
 # Blue Team Resources:
 
-##Links
+## Links
 
 [Linux Box Cleaning Checklist](../blob/master/Checklist-Linux.md)
 [Blue Team Field Manual](../blob/master/BTFM2017.pdf)
