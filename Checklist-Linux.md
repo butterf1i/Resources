@@ -27,13 +27,13 @@
 Depends on the scenario - block anything that isn't scored traffic or your own ssh traffic
 
 ### Suspicious Files
-Check the following for out-of-place files:
-* cron jobs
-* /root
-* /home/... for all users
-* /etc/systemd/init
-* /etc/rc.local
+* Check the following for out-of-place files:
+  * cron jobs
+  * /root
+  * /home/... for all users
+  * /etc/systemd/init
+  * /etc/rc.local
 
-### Other tasks
+### Other Tasks
 * generate your own SSH keys
 * continue monitoring auth.log and active processes
