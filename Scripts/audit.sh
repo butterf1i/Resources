@@ -9,9 +9,9 @@ then
 	AuthKeys=$(fgrep -m 1 AuthorizedKeysFile /etc/ssh/sshd_config)
 	if [ ${AuthKeys:0:1} != "#" ]
 	then
-		echo -n "Warning: non-standard SSH key location. Keys are in "
-		echo $AuthKeys
 		KeyLocation=$(echo `expr match AuthKeys '.*\s\(.*\/.*\).*'`)
+		echo -n "Warning: non-standard SSH key location. Keys are in"
+		echo $KeyLocation
 	else
 		KeyLocation=".ssh/authorized_keys"
 	fi
