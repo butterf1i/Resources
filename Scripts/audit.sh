@@ -12,7 +12,7 @@ then
 	if [ ${AuthKeys:0:1} != "#" ]
 	then
 		KeyLocation=$(echo `expr match AuthKeys '.*\s\(.*\/.*\).*'`)
-		echo -n "Warning: non-standard SSH key location. Keys are in"
+		echo -n "WARNING: non-standard SSH key location. Keys are in"
 		echo $KeyLocation
 	else
 		KeyLocation=".ssh/authorized_keys"
@@ -21,12 +21,13 @@ fi
 
 if test -f "$KeyLocation"
 then
-	echo -n  "Warning: found SSH key file: "
+	echo -n  "WARNING: found SSH key file: "
 	echo $KeyLocation
 fi
 
 
-echo "\n\n"
+echo ""
+echo ""
 
 
 # check firewall rules
@@ -35,4 +36,8 @@ ForwardRules=$(iptables -L FORWARD)
 OutputRules=$(iptables -L OUTPUT)
 echo "FIREWALL RULES:"
 echo "==============="
-echo "$InputRules \n $ForwardRules \n $OutputRules \n"
+echo "$InputRules"
+echo "$ForwardRules"
+echo "$OutputRules"
+
+
