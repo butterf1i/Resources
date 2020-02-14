@@ -40,4 +40,8 @@ echo "$InputRules"
 echo "$ForwardRules"
 echo "$OutputRules"
 
-
+if test 0 -lt $(echo "$InputRules" | grep -c 'Chain.*ACCEPT')
+then
+	echo "WARNING: firewall default policies set to ACCEPT"
+fi
+# TODO: does ufw affect how that works?
